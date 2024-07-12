@@ -27,6 +27,15 @@ const nextConfig = {
     ],
   },
   productionBrowserSourceMaps: false,
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        destination: 'https://www.pokerogues.com/$1',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
