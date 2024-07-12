@@ -33,13 +33,10 @@ const nextConfig = {
         source: '/(.*)',
         has: [
           {
-            type: 'host',
-            value: '^(?!www\\.pokerogues\\.com$)',
-          },
-          {
-            type: 'protocol',
-            value: 'http',
-          },
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http'
+          }
         ],
         destination: 'https://www.pokerogues.com/$1',
         permanent: true,
