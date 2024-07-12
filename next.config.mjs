@@ -31,6 +31,16 @@ const nextConfig = {
     return [
       {
         source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: '^(?!www\\.pokerogues\\.com$)',
+          },
+          {
+            type: 'protocol',
+            value: 'http',
+          },
+        ],
         destination: 'https://www.pokerogues.com/$1',
         permanent: true,
       },
