@@ -1,4 +1,4 @@
-Sitemap: www.pokerogues.com/sitemap.xml
+Sitemap: https://www.pokerogues.com/sitemap.xml
 
 User-agent: *
 Allow: /
